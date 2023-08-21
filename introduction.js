@@ -31,7 +31,7 @@ let//değiştirilebilir veriler için kullanılır!
 let name = 'MC'
 */
 
-
+************************************************************************************DAY2*******************************************************************************************
 // console.log('yu yazı introduction.js den geldi!')
 
 /*
@@ -83,3 +83,94 @@ console.log(txt.match(/\d+/g)) // ["2019", "30", "2020"]
 // ondan sonra g varsa global demektir, her yerde ara.
 */
 
+************************************************************************************DAY3&4*******************************************************************************************
+/*
+eğer bir değer == ile doğru değilse, === ile doğru olmayacaktır. === kullanmak == kullanmaktan daha güvenlidir. 
+bağlantı veri türleri &&(ve işareti) , || (veya işareti) , !(olumsuzlama). 
+&& operatörü, yalnızca iki işlenen doğruysa doğru olur. 
+|| operatör, işlenenlerden herhangi birinin doğru olması durumunda gerçekleşir. 
+! operatör true - false ve false - true değerini olumsuzlar.
+*/
+
+                                  Window Metotları
+alert() //metodu, belirtilen bir mesaj ve bir 'Tamam' butonu ile bir uyarı kutusu görüntüler.
+alert(message)
+alert('Welcome to 30DaysOfJavaScript')
+
+prompt('required text', 'optional text') //kullanıcıdan input almak için prompt komutu kullanılır.
+
+confirm() //bir 'Tamam' ve 'İptal' düğmesiyle birlikte iletişim kutusu görüntüler. 
+//onay kutusu kullanıcıdan bir şeyi yürütmek için izin istemek için kullanılır.
+const isDelete = confirm('Silmek istediğine emin misin?')
+console.log(isDelete ? 'Silme işlemi başarılı' : 'Silme işlemi iptal edildi.')
+
+/*
+date objesi tarih nesnesi değerlerinden tarih ve saat bilgisi almak için get kelimesi ile başlar.
+getDate(), getDay(), getHours(), getMinutes, getSeconds()..
+*/
+const now = new Date()
+console.log(now) // bu kod bulunduğumuz zamanın tam tarihini, ayını, gününü, saatini ve saniyesini alır.
+
+const now = new Date()
+console.log(now.getFullYear()) // 2023
+
+const now = new Date()
+console.log(now.getMonth()) // bulunduğunuz aydan bir önceki ayın sayısını alıcaktır çünkü Ocak 1 değil 0. ay oluyor Aralıkta 11. ay oluyor.
+
+const now = new Date()
+console.log(now.getDay()) // Pazar 0, Pazartesi 1 ve Cumartesi 6(Haftanın gününü tam sayı olarak alma (0-6))
+                              
+                              Conditionals - Koşullar
+IF
+// if koşulu kullanmak için normal parantez ve süslü parantezlerine ihtiyaç duyurulur. 
+// koşul parantez() içine, sonuç süslü parantez{} içine yazılır. 
+let num = 3
+if (num > 0) {
+  console.log(`${num} pozitif bir sayıdır`)
+}
+// koşul sağlanıyorsa sonuç değeri çıkar. koşul sağlanmıyorsa sonuç çıkmaz. sağlanmayan koşullar için else ile başka bir bloğumuz olmalıdır.
+ELSE
+// koşul doğruysa, if bloğu yürütülür, doğru değilse, else koşulu yürütülür.
+let num = -5
+if (num > 0) {
+  console.log(`${num} pozitif bir sayıdır`)
+} else{
+    console.log(`${num} negatif bir sayıdır`)
+}
+// else bloğu yürütülecektir.
+IF - ELSE IF - ELSE
+// birden fazla koşulumuz olduğunda else if kullanırız.
+let a = 0
+if (a > 0) {
+  console.log(`${a} pozitif sayıdır`)
+} else if (a < 0) {
+  console.log(`${a} negatif sayıdır`)
+} else if (a == 0) {
+  console.log(`${a} sayı sıfırdır`)
+} else {
+  console.log(`${a} bir sayı değildir`)
+}
+SWITCH
+// switch anahtar sözcüğüyle başlar, ardından bir parantez ve kod bloğu gelir. 
+// case bloğu, switch parantezindeki değer ile eşleşirse çalışır. 
+// break ifadesi, koşul yerine getirildikten sonra kod yürütmesini sonlandırmak içindir.
+// default blok, tüm durumlar koşulu karşılamıyorsa çalışır.
+switch(caseValue){
+    case 1:
+      // code
+      break
+    case 2:
+     // code
+     break
+    case 3:
+     // code
+     break
+    default:
+     // code
+  }
+  TERNARY
+  //koşullar yazmanın başka bir yolu da üçlü operatörleri kullanmaktır.
+  let isRaining = true
+isRaining
+  ? console.log('Bir yağmurluğa ihtiyacın var')
+  : console.log('Bir yağmurluğa ihtiyacın yok')
