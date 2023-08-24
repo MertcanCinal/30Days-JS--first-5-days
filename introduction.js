@@ -46,8 +46,8 @@ youtube.substr(5,3) //=ilk sayı kaçıncı harf, 2. sayı kaç uzunlukta olcağ
 */
 
 /*
-'mertcan'.split('')
-'mertcan.split('').reverse()
+'mertcan'.split('') // tek tek harfleri ayırır ve dizi haline getirir.
+'mertcan.split('').reverse() // tek tek ayrılan harfleri tersten sıralar.
 'mertcan.split('').reverse().join('')
 'nactrem'//=ismi önce dizi haline getirdik. sonra ters yazılmasını sağladık.
 */
@@ -174,3 +174,45 @@ switch(caseValue){
 isRaining
   ? console.log('Bir yağmurluğa ihtiyacın var')
   : console.log('Bir yağmurluğa ihtiyacın yok')
+
+  ************************************************************************************DAY5*******************************************************************************************
+  
+                                                                                 ARRAY - DİZİLER
+// bir dizi değişkeni tanımlamak için "let" yerine "const" kullanmak daha yaygındır.
+const  arr = Array()
+console.log(arr)
+// boş bir dizi oluşturmak için köşeli parantez kullanırız.
+const  arr = []
+console.log(arr)                    
+/*
+dizileri değiştirmek için kullanışlı yöntemlerden bazıları;
+Array, length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift
+*/ 
+
+const names= Array(3).fill(MC)
+console.log(names)
+//bu kod "3" tane "MC" den oluşan dizi oluşturur.
+
+concat // bir veye birden fazla dizileri birbiri ile birleştirir.
+const  array1 = [1, 2, 3]
+const  array2 = [4, 5, 6]
+const  array3 = array1.concat(array2)
+console.log(array3) // [1, 2, 3, 4, 5, 6]
+
+console.log(numbers.includes(5)) // dizi içindeki veriyi sorgulamaya yarar.
+console.log(Array.isArray(names)) // names bir dizi mi diye sorgular.
+
+DİZİ ELEMANLARINI BİRLEŞTİRMEK
+const  names = ['MC', 'GS', 'N69']
+console.log(names.join()) // MC,GS,N69
+console.log(names.join('')) //MCGSN69
+console.log(names.join(' ')) //MC GS N69
+console.log(names.join(', ')) //MC, GS, N69
+console.log(names.join(' # ')) //MC # GS # N69
+DİZİ ELEMANLARINI SIRALAMAK
+webTechs.sort()
+console.log(webTechs) // dizi elemanlarını alfabetik sırada düzenler.
+****
+const numbers = [4, 10, 1, [4, 5, 6], 8]
+console.log(numbers[3][1]) //=5----dizi içinde dizi varsa; önce dizi elemanı sonra dizi içindeki istenen eleman []'ler ile yan yana yazılır
+
